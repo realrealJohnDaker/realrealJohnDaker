@@ -1,4 +1,5 @@
 function f(s, n, c) {
+    console.log(s+", "+n+", "+c);
     if (s == 0) {
         return n + 1;
     } else if (c > 1) {
@@ -8,7 +9,7 @@ function f(s, n, c) {
     }
 }
 function fghN(){
-    var a=document.getElementById("a").value;
-    var b=document.getElementById("b").value;
-    document.getElementById("c").innerHTML=f(a,b,1);
+    var a=parseInt(document.getElementById("a").value);
+    var b=parseInt(document.getElementById("b").value);
+    document.getElementById("c").value=f(a,b,1);
 }
