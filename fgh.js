@@ -11,5 +11,6 @@ function f(s, n, c) {
 function fghN(){
     var a=parseInt(document.getElementById("a").value);
     var b=parseInt(document.getElementById("b").value);
-    document.getElementById("c").value=f(a,b,1);
+    if(a!=0){document.getElementById("c").value=f(a+1,b,1);}
+    else{document.getElementById("c").value=f(0,b,1);}
 }
