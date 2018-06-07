@@ -1,11 +1,15 @@
 function f(s, n, c) {
-    console.log(s+", "+n+", "+c);
+    //console.log(s+", "+n+", "+c);
+    if(!Array.isArray(n)){n=sta(n+"");}
+    console.log(n);
+    if(!Array.isArray(c)){n=sta(c+"");}
+    c=sta(c+"");
     if (s == 0) {
-        return n + 1;
+        return add(sta(n+""),[1]);
     } else if (s == 1){
-        return 2 * n;
+        return add(sta(n+""),sta(n+""));
     } else if (c > 1) {
-        return f(s, f(s, n, 1), c - 1);
+        return f(s, f(s, n, 1), add(sta(c+""),[-1]));
     } else {
         return f(s - 1, n, n);
     }
